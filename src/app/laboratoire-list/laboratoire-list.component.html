@@ -1,0 +1,15 @@
+<h2>Liste des Laboratoires</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Logo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let laboratoire of laboratoires">
+            <td>{{ laboratoire.nom }}</td> 
+            <td><img [src]="laboratoire.logo" alt="{{ laboratoire.nom }}" /></td>
+        </tr>
+    </tbody>
+</table>

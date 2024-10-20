@@ -1,0 +1,17 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Laboratoire } from './laboratoire'; // Assurez-vous que le chemin est correct
+
+@Injectable({
+  providedIn: 'root' // Assurez-vous que le service est fourni ici
+})
+export class ServiceLaboratoireService {
+  private apiUrl = 'http://localhost:8080/laboratoires'; // Remplacez par l'URL de votre API
+
+  constructor(private httpClient: HttpClient) {}
+
+  getLaboratoiresList(): Observable<Laboratoire[]> {
+    return this.httpClient.get<Laboratoire[]>(`${this.apiUrl}`);
+  }
+}
