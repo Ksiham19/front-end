@@ -3,13 +3,15 @@
     <thead>
         <tr>
             <th>Nom</th>
-            <th>Logo</th>
+            <th>NRC</th>
+            <th>Date Activation</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let laboratoire of laboratoires">
             <td>{{ laboratoire.nom }}</td> 
-            <td><img [src]="laboratoire.logo" alt="{{ laboratoire.nom }}" /></td>
+            <td>{{ laboratoire.nrc}}</td>
+            <td>{{ laboratoire.dateActivation}}</td>
         </tr>
     </tbody>
 </table>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { LaboratoireListComponent } from './laboratoire-list/laboratoire-list.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -8,7 +9,7 @@ import { LaboratoireListComponent } from './laboratoire-list/laboratoire-list.co
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   imports: [LaboratoireListComponent,
-    HttpClientModule
+    HttpClientModule,RouterModule
   ]
 })
 export class AppComponent {

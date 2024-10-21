@@ -1,15 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-// Supprimez les déclarations des composants autonomes
+import { AppRoutingModule } from './app-routing.module';
+import { importProvidersFrom } from '@angular/core';
+import { LaboratoireListComponent } from './laboratoire-list/laboratoire-list.component';
+import { AppComponent } from './app.component';
+import { AjouterLaboratoireComponent } from './ajouter-laboratoire/ajouter-laboratoire.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
-    // Ici, importez vos composants autonomes
+    AppRoutingModule,
+    LaboratoireListComponent,
+    AjouterLaboratoireComponent ,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [/* Ici, vous pouvez définir le composant racine ou laisser vide pour un composant autonome */]
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

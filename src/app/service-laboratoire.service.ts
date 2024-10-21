@@ -14,4 +14,9 @@ export class ServiceLaboratoireService {
   getLaboratoiresList(): Observable<Laboratoire[]> {
     return this.httpClient.get<Laboratoire[]>(this.apiUrl);
   }
+
+
+  ajouterLaboratoire(laboratoire : Laboratoire): Observable<Object>{
+    return this.httpClient.post(this.apiUrl,laboratoire);
+  }
 }
